@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import iAd
 
 class MenuViewController: UIViewController {
 
@@ -14,6 +15,8 @@ class MenuViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        canDisplayBannerAds = true
     }
 
     @IBAction func didTapPlay(sender: AnyObject) {

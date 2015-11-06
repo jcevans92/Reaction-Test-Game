@@ -8,6 +8,7 @@
 
 import UIKit
 import SpriteKit
+import iAd
 
 
 
@@ -35,6 +36,9 @@ class GameViewController: UIViewController, GameDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        UIViewController.prepareInterstitialAds()
+        self.interstitialPresentationPolicy = .Manual
         
         shareButton.hidden = true
         
@@ -69,6 +73,7 @@ class GameViewController: UIViewController, GameDelegate {
     func gameFinished() {
         snapPic()
         shareButton.hidden = false
+        self.requestInterstitialAdPresentation()
     }
 
  

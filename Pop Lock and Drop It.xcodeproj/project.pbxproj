@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7F30D3541BEC45EB0085082F /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F30D3531BEC45EB0085082F /* iAd.framework */; };
 		7F83D8591BEBE4960072DDD6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F83D8581BEBE4960072DDD6 /* AppDelegate.swift */; };
 		7F83D85D1BEBE4960072DDD6 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F83D85C1BEBE4960072DDD6 /* GameScene.swift */; };
 		7F83D85F1BEBE4960072DDD6 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F83D85E1BEBE4960072DDD6 /* GameViewController.swift */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7F30D3531BEC45EB0085082F /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		7F83D8551BEBE4960072DDD6 /* Pop Lock and Drop It.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pop Lock and Drop It.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F83D8581BEBE4960072DDD6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7F83D85C1BEBE4960072DDD6 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
@@ -60,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F30D3541BEC45EB0085082F /* iAd.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,9 +83,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7F30D3551BEC45F00085082F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7F30D3531BEC45EB0085082F /* iAd.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		7F83D84C1BEBE4960072DDD6 = {
 			isa = PBXGroup;
 			children = (
+				7F30D3551BEC45F00085082F /* Frameworks */,
 				7F83D8571BEBE4960072DDD6 /* Pop Lock and Drop It */,
 				7F83D8701BEBE4960072DDD6 /* Pop Lock and Drop ItTests */,
 				7F83D87B1BEBE4960072DDD6 /* Pop Lock and Drop ItUITests */,
@@ -498,6 +510,7 @@
 				7F83D8831BEBE4960072DDD6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7F83D8841BEBE4960072DDD6 /* Build configuration list for PBXNativeTarget "Pop Lock and Drop ItTests" */ = {
 			isa = XCConfigurationList;
@@ -506,6 +519,7 @@
 				7F83D8861BEBE4960072DDD6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7F83D8871BEBE4960072DDD6 /* Build configuration list for PBXNativeTarget "Pop Lock and Drop ItUITests" */ = {
 			isa = XCConfigurationList;
@@ -514,6 +528,7 @@
 				7F83D8891BEBE4960072DDD6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
