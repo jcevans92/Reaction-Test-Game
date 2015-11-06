@@ -17,24 +17,51 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="GYQ-vp-UXV">
-                                <rect key="frame" x="20" y="540" width="560" height="40"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="IYt-EM-WP6">
+                                <rect key="frame" x="20" y="490" width="560" height="90"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="emA-jq-E4c">
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="GYQ-vp-UXV">
                                         <rect key="frame" x="0.0" y="0.0" width="560" height="40"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="emA-jq-E4c">
+                                                <rect key="frame" x="0.0" y="0.0" width="560" height="40"/>
+                                                <animations/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="BXX-Be-wIw"/>
+                                                    <constraint firstAttribute="width" constant="560" id="Iik-jb-1dM"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="25"/>
+                                                <state key="normal" title="Menu">
+                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="didTapMenuBtn:" destination="BV1-FR-VrT" eventType="touchUpInside" id="tic-cc-gtC"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
                                         <animations/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="BXX-Be-wIw"/>
-                                            <constraint firstAttribute="width" constant="560" id="Iik-jb-1dM"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="25"/>
-                                        <state key="normal" title="Menu">
-                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="didTapMenuBtn:" destination="BV1-FR-VrT" eventType="touchUpInside" id="tic-cc-gtC"/>
-                                        </connections>
-                                    </button>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="32H-AS-JGm">
+                                        <rect key="frame" x="0.0" y="50" width="560" height="40"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="axT-44-7Hz">
+                                                <rect key="frame" x="0.0" y="0.0" width="560" height="40"/>
+                                                <animations/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="560" id="DUV-bF-vcl"/>
+                                                    <constraint firstAttribute="height" constant="40" id="zWa-wh-mW1"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="25"/>
+                                                <state key="normal" title="Share">
+                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="didTapShare:" destination="BV1-FR-VrT" eventType="touchUpInside" id="z73-y6-KWf"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <animations/>
+                                    </stackView>
                                 </subviews>
                                 <animations/>
                             </stackView>
@@ -42,10 +69,13 @@
                         <animations/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="GYQ-vp-UXV" firstAttribute="centerY" secondItem="3se-qz-xqx" secondAttribute="centerY" constant="260" id="E1L-mr-a4Q"/>
-                            <constraint firstItem="GYQ-vp-UXV" firstAttribute="centerX" secondItem="3se-qz-xqx" secondAttribute="centerX" id="ejZ-Lq-qlL"/>
+                            <constraint firstItem="IYt-EM-WP6" firstAttribute="centerY" secondItem="3se-qz-xqx" secondAttribute="centerY" constant="235" id="k4y-PP-of9"/>
+                            <constraint firstItem="IYt-EM-WP6" firstAttribute="centerX" secondItem="3se-qz-xqx" secondAttribute="centerX" id="ldv-jn-QJ6"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="shareButton" destination="axT-44-7Hz" id="Z5f-LJ-CEB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
             </objects>

@@ -8,7 +8,14 @@
 
 import SpriteKit
 
+protocol GameDelegate {
+    func gameStarted()
+    func gameFinished()
+}
+
 class GameScene: SKScene {
+    
+    var gameDelegate = GameDelegate?()
     
     var lock = SKShapeNode()
     var needle = SKShapeNode()
@@ -82,6 +89,9 @@ class GameScene: SKScene {
        /* Called when a touch begins */
         
         if !started {
+            
+            self.gameDelegate?.gameStarted()
+            
             currentScoreLabel.text = "\(level - dots)"
             runClockwise()
             started = true
@@ -167,7 +177,7 @@ class GameScene: SKScene {
             self.dots = 0
             self.level = 0
             self.layoutGame()
-        
+            self.gameDelegate?.gameFinished()
             
         })
         
@@ -190,7 +200,7 @@ class GameScene: SKScene {
             self.dots = 0
             self.level++
             self.layoutGame()
-            
+            self.gameDelegate?.gameFinished()
             
         })
         
